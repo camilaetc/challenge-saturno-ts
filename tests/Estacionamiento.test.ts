@@ -10,6 +10,10 @@ const lector = new LectorFalso();
 
 const estacionamiento: IEstacionamiento = new Estacionamiento(acceso, barrera);
 
+afterEach(() => {
+  jest.clearAllMocks();
+});
+
 test("Deberia existir una clase Estacionamiento que implemente IEstacionamiento", () => {
   expect(estacionamiento).toBeDefined();
 });

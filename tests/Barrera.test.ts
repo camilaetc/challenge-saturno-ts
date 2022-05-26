@@ -3,6 +3,10 @@ import { IBarrera } from "../src/interfaces";
 
 const barrera: IBarrera = new Barrera();
 
+afterEach(() => {
+  jest.clearAllMocks();
+});
+
 test("Deberia existir una clase Barrera que implemente IBarrera", () => {
   expect(barrera).toBeDefined();
 });

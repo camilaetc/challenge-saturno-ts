@@ -3,6 +3,10 @@ import { IAcceso } from "../src/interfaces";
 
 const acceso: IAcceso = new Acceso();
 
+afterEach(() => {
+  jest.clearAllMocks();
+});
+
 test("Deberia existir una clase Acceso que implemente IAcceso", () => {
   expect(acceso).toBeDefined();
 });
